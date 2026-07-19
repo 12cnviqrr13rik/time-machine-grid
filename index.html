@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME CAPSULE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="tooltip" class="tooltip"></div>
+
+<div id="modal-acquisto" class="modal-hidden">
+    <div class="modal-content">
+        <h3>BUY YOUR TIME PIXEL</h3>
+        <p id="data-scelta" style="font-weight: bold;"></p>
+        <input type="text" id="input-messaggio" placeholder="Write your message..." maxlength="50">
+        <div class="modal-btns">
+            <button id="btn-conferma">PAY NOW (2€)</button>
+            <button id="btn-chiudi">CANCEL</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>TIME CAPSULE</h1>
+    
+    <div class="nav-controls">
+        <button onclick="cambiaData(-400)">← INDIETRO</button>
+        <button onclick="cambiaData(400)">AVANTI →</button>
+    </div>
+
+    <div id="counter" style="margin-bottom: 20px; color: #fff; font-size: 14px;">Pixels claimed: 0/400</div>
+    <div class="scroller-container">
+        <div id="tabellone" class="griglia"></div>
+    </div>
+    
+    <div class="footer-note">
+        <p>Each pixel represents one day. Claim your moment in history.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+    <script src="/script.js"></script>
+  </body>
+
+</html>
