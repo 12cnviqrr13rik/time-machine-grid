@@ -5,6 +5,9 @@
     const counter = document.getElementById('counter');
     const GOOGLE_API_URL = "https://script.google.com/macros/s/AKfycbzDegTFimnMMFQsdTukR360jPfk3byurBwo_GPfiPKGVQ3UAwiZ8CqmiF9PoINOhxpf/exec";
 
+    // Palette colori casuali
+    const palette = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF33A8', '#33FFF3'];
+
     let dataCorrenteVisualizzata = new Date();
 
     function formattaDataItaliana(data) {
@@ -23,6 +26,7 @@
                     datiVenduti.set(data, riga[1] || "Purchased!");
                 }
             });
+            // Aggiorna contatore
             counter.innerText = `Pixels claimed: ${datiVenduti.size}/400`;
         } catch (e) { console.error("Error:", e); }
 
@@ -39,6 +43,10 @@
             
             if (datiVenduti.has(dataStringa)) {
                 pixel.classList.add('venduto');
+                // Assegna colore casuale
+                const randomColor = palette[Math.floor(Math.random() * palette.length)];
+                pixel.style.backgroundColor = randomColor;
+                
                 pixel.addEventListener('mouseenter', () => {
                     tooltip.style.display = 'block';
                     tooltip.innerHTML = `<strong>${dataStringa}</strong><br>${datiVenduti.get(dataStringa)}`;
