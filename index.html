@@ -40,7 +40,11 @@
         <button onclick="cambiaData(400)">AVANTI →</button>
     </div>
 
-    <div id="counter" style="margin-bottom: 20px; color: #fff; font-size: 14px;">Pixels claimed: 0/400</div>
+    <!-- Contatore aggiornato -->
+    <div id="counter" style="margin-bottom: 20px; color: #fff; font-size: 14px;">
+        Pixels claimed: <span id="pixel-count">0</span>/400
+    </div>
+
     <div class="scroller-container">
         <div id="tabellone" class="griglia"></div>
     </div>
